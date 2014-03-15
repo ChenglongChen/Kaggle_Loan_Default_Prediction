@@ -110,6 +110,7 @@ trainDefaulterClassifier <- function(loan, gbm_params, plot_on=FALSE){
     shrinkage = gbm_params$shrinkage,
     interaction.depth = gbm_params$interaction.depth,
     train.fraction = gbm_params$train.fraction,
+    bag.fraction = gbm_params$bag.fraction,
     n.minobsinnode = gbm_params$n.minobsinnode,
     cv.folds = gbm_params$cv.folds,
     class.stratify.cv = gbm_params$class.stratify.cv,
@@ -150,6 +151,7 @@ trainLossRegressor <- function(loan, gbm_params, plot_on=FALSE){
                  shrinkage = gbm_params$shrinkage,
                  interaction.depth = gbm_params$interaction.depth, 
                  train.fraction = gbm_params$train.fraction,
+                 bag.fraction = gbm_params$bag.fraction,
                  n.minobsinnode = gbm_params$n.minobsinnode,
                  cv.folds = gbm_params$cv.folds,
                  verbose = gbm_params$verbose,
@@ -175,6 +177,7 @@ trainLossRegressor <- function(loan, gbm_params, plot_on=FALSE){
                  shrinkage = gbm_params$shrinkage, 
                  interaction.depth = gbm_params$interaction.depth, 
                  train.fraction = gbm_params$train.fraction,
+                 bag.fraction = gbm_params$bag.fraction,
                  n.minobsinnode = gbm_params$n.minobsinnode,
                  cv.folds = gbm_params$cv.folds,
                  verbose = gbm_params$verbose,
@@ -540,7 +543,7 @@ repeated_cv <- 10
 # number of random seed
 seed_num <- 20
 # random seeds
-set.seed(2014) # to ensure reproducable
+set.seed(2014) # to ensure reproducable results
 random_seeds <- sample(10000, seed_num)
 
 
