@@ -66,7 +66,7 @@ logit_fn <- function(y, y_min, y_max, epsilon, transform='logit'){
   if(transform == 'logit'){
     ## logit transform is suggested in the paper
     # M. Bottai, B. Cai, and R. E. McKeown,
-    # "gistic quantile regression for bounded outcomes,"
+    # "logistic quantile regression for bounded outcomes,"
     # Statistics in Medicine, vol. 29, no. 2, pp. 309-317, 2010.
     # and discussed in
     # http://stats.stackexchange.com/questions/48034/dealing-with-regression-of-unusually-bounded-response-variable
